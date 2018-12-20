@@ -1,0 +1,31 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: azz-zipkin-server
+  sleuth: 
+    enabled: false
+  datasource:
+    #schema[0]: classpath:/zipkin.sql
+    url: jdbc:mysql://120.78.162.226:3306/zipkin?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    password: azz2025
+    driver-class-name: com.mysql.jdbc.Driver
+    initialize: true
+    continue-on-error: true
+  rabbitmq: 
+    host: 192.168.1.222
+    port: 5672
+    username: admin
+    password: 123456
+zipkin: 
+  storage:
+    type: mysql
+eureka:
+  client:
+    service-url:
+       defaultZone: http://root:123456@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    
