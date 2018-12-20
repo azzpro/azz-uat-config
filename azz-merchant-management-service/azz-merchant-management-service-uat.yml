@@ -25,8 +25,8 @@ azz:
  datasource:
     dataSourceConfig: 
       -
-        url : jdbc:mysql://120.78.162.226:3306/azz_test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-        db: azz_dev
+        url : jdbc:mysql://120.78.162.226:3306/azz_uat?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+        db: azz_uat
         defaultDatasource: true
         username: root
         password: azz2025
