@@ -1,0 +1,87 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  max-http-header-size: 4048576
+spring:
+  messages:
+    basename: i18n/Messages
+  zipkin:
+    enabled: true
+    base-url: http://localhost:7777/
+    service:
+      name: ${spring.application.name}
+  sleuth:
+    enabled: true
+    sampler:
+      percentage: 1
+  rabbitmq: 
+    host: 120.78.162.226
+    port: 5672
+    username: admin
+    password: 123456
+azz: 
+ datasource:
+    dataSourceConfig: 
+      -
+        url : jdbc:mysql://120.78.162.226:3306/azz_test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+        db: azz_dev
+        defaultDatasource: true
+        username: root
+        password: azz2025
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        maxOpenPreparedStatements: 20
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat,wall,log4j
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    monitorConfig:
+      available: true
+      allow: 127.0.0.1
+      deny: 127.0.0.2
+      loginUsername: admin
+      loginPassword: 123456
+      resetEnable: false
+
+feign:
+  httpclient: 
+    enabled: true #feign原生是调用java.url 去发起HTTP请求，此配置是将请求客户端更换成apahce http
+  hystrix: 
+    enabled: false
+    
+azz-sequence-service:  #序列服务
+  ribbon:
+    ConnectTimeout: 2000
+    ReadTimeout: 5000
+    OkToRetryOnAllOperations: false
+    MaxAutoRetriesNextServer: 0
+    MaxAutoRetries: 0
+azz-system-service:  #系统服务
+  ribbon:
+    ConnectTimeout: 2000
+    ReadTimeout: 5000
+    OkToRetryOnAllOperations: false
+    MaxAutoRetriesNextServer: 0
+    MaxAutoRetries: 0 
+eureka:
+  client:
+    service-url:
+       defaultZone: http://root:123456@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mapping/**/*.xml
+
