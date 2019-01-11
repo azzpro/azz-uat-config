@@ -168,4 +168,28 @@ azz:
      id: MerchantInvoiceApplySequence #商户开票
      type: MerchantInvoiceApplyCodeSequence
      args: {id: 'MB', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: WxBrandSequence #微信品牌
+     type: WxBrandSequence
+     args: {id: 'KD', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxClassBeginSequence #微信开课
+     type: WxClassBeginSequence
+     args: {id: 'KK', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxClassificationSequence #微信分类
+     type: WxClassificationSequence
+     args: {id: 'KF', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxCourseSequence #微信课程
+     type: WxCourseSequence
+     args: {id: 'KC', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxParamTremSequence #微信参数项
+     type: WxParamTremSequence
+     args: {id: 'KT', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxParamValueSequence #微信参数值
+     type: WxParamValueSequence
+     args: {id: 'KV', maxSequenceValue: '99999999', length: '8', step: '5'}
   
