@@ -19,17 +19,6 @@ spring:
     port: 5672
     username: admin
     password: 123456
-  datasource:
-    username: root
-    password: azz2025
-    type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://120.78.162.226:3306/azz_uat?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    driver-class-name: com.mysql.jdbc.Driver
-    dbcp2:
-      min-idle: 5
-      initial-size: 5
-      max-total: 5
-      max-wait-millis: 200
 feign:
   httpclient: 
     enabled: true #feign原生是调用java.url 去发起HTTP请求，此配置是将请求客户端更换成apahce http
@@ -80,40 +69,127 @@ azz:
     available: true
     sequenceConfigs:
     -
-     id: PlatDeptSequence
+     id: PlatDeptSequence #平台部门编码
      type: PlatDeptCodeSequence
-     args: {id: 'IB', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'A2', maxSequenceValue: '99999', length: '5', step: '5'}
     -
-     id: PlatEmployeeSequence
+     id: PlatEmployeeSequence #平台员工编码
      type: PlatEmployeeCodeSequence
-     args: {id: 'IA', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'A1', maxSequenceValue: '99999', length: '5', step: '5'}
     -
-     id: PlatPowerSequence
+     id: PlatPowerSequence #平台角色编码
      type: PlatPowerCodeSequence
-     args: {id: 'IH', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'A3', maxSequenceValue: '99999', length: '5', step: '5'}
     -
-     id: MerchantPowerSequence
+     id: MerchantPowerSequence #商户角色编码
      type: MerchantPowerCodeSequence
-     args: {id: 'IL', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'A6', maxSequenceValue: '99999999', length: '8', step: '5'}
     -
-     id: MerchantDeptSequence
+     id: MerchantDeptSequence #商户部门编码
      type: MerchantDeptCodeSequence
-     args: {id: 'IE', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'A5', maxSequenceValue: '99999999', length: '8', step: '5'}
     -
-     id: MerchantEmployeeSequence
+     id: MerchantEmployeeSequence #商户员工编码
      type: MerchantEmployeeCodeSequence
-     args: {id: 'ID', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'A4', maxSequenceValue: '99999999', length: '8', step: '5'}
     -
-     id: MerchantTenantSequence
+     id: MerchantTenantSequence #商户商户编码
      type: MerchantTenantCodeSequence
-     args: {id: 'IC', maxSequenceValue: '99999999', length: '8', step: '5'}
+     args: {id: 'C1', maxSequenceValue: '999999', length: '6', step: '5'}
     -
-     id: random
-     type: randomSequence
-     args: {length: '6'}
+     id: ClientDeptSequence #客户端部门编码
+     type: ClientDeptSequence
+     args: {id: 'A8', maxSequenceValue: '99999999', length: '8', step: '5'}
     -
-     id: ProductRandom
-     type: ProductRandomSequence
-     args: {length: '10'}
-    
+     id: ClientEmployeeSequence #客户端员工编码
+     type: ClientEmployeeSequence
+     args: {id: 'A7', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ClientPowerSequence #客户端角色编码
+     type: ClientPowerSequence
+     args: {id: 'A9', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ClientCompanySequence #客户端企业编码
+     type: ClientCompanySequence
+     args: {id: 'C3', maxSequenceValue: '999999', length: '6', step: '5'}
+    -
+     id: ClientGuestSequence #客户端客户编码
+     type: ClientGuestSequence
+     args: {id: 'C2', maxSequenceValue: '999999', length: '6', step: '5'}
+    -
+     id: ProductClassSequence #产品体系分类编码
+     type: ProductClassSequence
+     args: {id: 'CF', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ProductBrandSequence #产品体系品牌编码
+     type: ProductBrandSequence
+     args: {id: 'BD', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ProductParamTermSequence #产品体系参数项编码
+     type: ProductParamTermSequence
+     args: {id: 'PT', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ProductParamSequence #产品体系参数编码
+     type: ProductParamSequence
+     args: {id: 'PV', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ProductSequence #产品体系产品编码
+     type: ProductSequence
+     args: {id: 'PN', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: ProductMoudleSequence #产品体系模组编码
+     type: ProductMoudleSequence
+     args: {id: 'MN', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: OptionPlanSequence #选项体系方案编码
+     type: OptionPlanSequence
+     args: {id: 'JN', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: OptionGroupSequence #选项体系组合编码
+     type: OptionGroupSequence
+     args: {id: 'CN', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: OrderPersonlSequence #个人订单
+     type: OrderPersonlSequence
+     args: {id: 'PO', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: OrderCompanySequence #企业订单
+     type: OrderCompanySequence
+     args: {id: 'CO', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: OrderMerchantSequence #商户订单
+     type: OrderMerchantSequence
+     args: {id: 'MO', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: ClientInvoiceApplySequence #客户开票
+     type: ClientInvoiceApplyCodeSequence
+     args: {id: 'CB', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: MerchantInvoiceApplySequence #商户开票
+     type: MerchantInvoiceApplyCodeSequence
+     args: {id: 'MB', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: WxBrandSequence #微信品牌
+     type: WxBrandSequence
+     args: {id: 'KD', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxClassBeginSequence #微信开课
+     type: WxClassBeginSequence
+     args: {id: 'KK', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxClassificationSequence #微信分类
+     type: WxClassificationSequence
+     args: {id: 'KF', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxCourseSequence #微信课程
+     type: WxCourseSequence
+     args: {id: 'KC', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxParamTremSequence #微信参数项
+     type: WxParamTremSequence
+     args: {id: 'KT', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: WxParamValueSequence #微信参数值
+     type: WxParamValueSequence
+     args: {id: 'KV', maxSequenceValue: '99999999', length: '8', step: '5'}
   
