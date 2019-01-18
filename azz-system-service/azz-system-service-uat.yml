@@ -76,3 +76,12 @@ aliyun:
   accessKeySecret: XmhLjEphQ8IZrhRDptI9WvhxFuaxn0
   endpoint: http://oss-cn-shenzhen.aliyuncs.com
   signName: 爱智造
+email:
+  account: mail@izz2025.com
+  pass: CWrd5JeH5FXEqHR5
+  host: smtp.exmail.qq.com
+  port: 465
+  protocol: smtp
+wx:
+  AppId: wx3eceba5b48a7f46e
+  AppSecret: 799c42aecba2516669243293a0b4ec27
