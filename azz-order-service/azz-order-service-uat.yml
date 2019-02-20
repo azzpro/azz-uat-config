@@ -71,7 +71,7 @@ mybatis:
 yeepay: 
   parentMerchantNo: 10000466938
   merchantNo: 10000466938
-  baseURL: https://open.yeepay.com/yop-center
+  baseURL: https://openapi.yeepay.com/yop-center/
   tradeOrderURI: /rest/v1.0/std/trade/order
   orderQueryURI: /rest/v1.0/std/trade/orderquery
   refundURI: /rest/v1.0/std/trade/refund
