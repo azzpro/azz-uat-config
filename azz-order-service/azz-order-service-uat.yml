@@ -68,7 +68,7 @@ feign:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mapping/**/*.xml
-yeepay:
+yeepay: 
   parentMerchantNo: 10000466938
   merchantNo: 10000466938
   baseURL: https://open.yeepay.com/yop-center
