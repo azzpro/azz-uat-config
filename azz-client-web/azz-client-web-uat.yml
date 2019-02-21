@@ -48,6 +48,4 @@ azz-client-service:  #客户端服务
 shiro:
   session:
     timeout: 1800000
-yeepay: 
-  notify-url: http://c.izz2025.com/azz/api/pay/payNotify
 
