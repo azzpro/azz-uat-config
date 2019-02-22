@@ -69,4 +69,4 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mapping/**/*.xml
 yeepay: 
-  notify-url: http://c.izz2025.com/azz/api/pay/payNotify
+  notify-url: http://120.78.162.226:8081/azz/api/pay/payNotify
