@@ -90,5 +90,9 @@ wx:
   AppId: wx3eceba5b48a7f46e
   AppSecret: 799c42aecba2516669243293a0b4ec27
 qq: 
-  open: 
-    me: https://graph.qq.com/oauth2.0/me?unionid=1&access_token=%s
+  AppId: 101553764
+  AppSecret: c5c477f300e6a8259ee4fd08b85d970b
+  baseUrl: https://graph.qq.com
+  user_info_url: /user/get_user_info?access_token=%s&oauth_consumer_key=%s&openid=%s
+  conn_timeout: 5000
+  read_timeout: 5000
