@@ -192,4 +192,19 @@ azz:
      id: WxParamValueSequence #微信参数值
      type: WxParamValueSequence
      args: {id: 'KV', maxSequenceValue: '99999999', length: '8', step: '5'}
-  
+    -
+     id: WxCourseOrderSequence #微信课程订单编码
+     type: WxCourseOrderSequence
+     args: {id: 'KO', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: WxCourseOrderAfterSaleApplySequence #微信课程订单售后申请编码
+     type: WxCourseOrderAfterSaleApplySequence
+     args: {id: 'KA', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: WxCourseOrderRefundSequence #微信课程订单退款申请编码
+     type: WxCourseOrderRefundSequence
+     args: {id: 'KR', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: WxCourseOrderWithdrawSequence #微信课程订单提现申请编码
+     type: WxCourseOrderWithdrawSequence
+     args: {id: 'KH', maxSequenceValue: '99999', length: '5', step: '5'}
