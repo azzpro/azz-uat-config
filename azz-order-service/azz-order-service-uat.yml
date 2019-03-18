@@ -68,5 +68,11 @@ feign:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mapping/**/*.xml
+wx:
+  AppId: wx6657c21ece08b798
+  secrt: a7bea96fb7fe6596d0c293ac36a6daaf
+  mchId: 1524785261
+  Api: a4C99Fsej911ljEM87Jhf1Q8nBL82Poz
+  callback: http://120.78.162.226:8081/azz/api/wx/pay/callback
 yeepay: 
   notify-url: http://120.78.162.226:8081/azz/api/pay/payNotify
