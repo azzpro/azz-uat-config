@@ -52,6 +52,13 @@ azz-user-service:
     OkToRetryOnAllOperations: false
     MaxAutoRetriesNextServer: 0
     MaxAutoRetries: 0
+azz-order-service: 
+  ribbon:
+    ConnectTimeout: 2000
+    ReadTimeout: 6000
+    OkToRetryOnAllOperations: false
+    MaxAutoRetriesNextServer: 0
+    MaxAutoRetries: 0
 eureka:
   client:
     service-url:
