@@ -208,3 +208,7 @@ azz:
      id: WxCourseOrderWithdrawSequence #微信课程订单提现申请编码
      type: WxCourseOrderWithdrawSequence
      args: {id: 'KH', maxSequenceValue: '99999', length: '5', step: '5'}
+    -
+     id: WithdrawDepositApplySequence #商户提现申请编码
+     type: WithdrawDepositApplySequence
+     args: {id: 'WD', maxSequenceValue: '99999', length: '5', step: '5'}
