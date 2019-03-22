@@ -55,7 +55,7 @@ azz-user-service:
 azz-order-service: 
   ribbon:
     ConnectTimeout: 2000
-    ReadTimeout: 6000
+    ReadTimeout: 10000
     OkToRetryOnAllOperations: false
     MaxAutoRetriesNextServer: 0
     MaxAutoRetries: 0
