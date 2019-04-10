@@ -43,7 +43,7 @@ azz:
         password: azz2025
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        maxActive: 20
+        maxActive: 200
         initialSize: 1
         maxWait: 60000
         minIdle: 1
