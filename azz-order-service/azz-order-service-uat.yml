@@ -74,6 +74,7 @@ wx:
   mchId: 1524785261
   Api: a4C99Fsej911ljEM87Jhf1Q8nBL82Poz
   callback: http://120.78.162.226:8081/azz/api/wx/pay/callback
+  activecallback: http://120.78.162.226:8081/azz/api/wx/pay/activetyCallback
 yeepay: 
   notify-url: http://120.78.162.226:8081/azz/api/pay/payNotify
   regEn-notify-url: http://120.78.162.226:8080/azz/api/merchant/regEnterpriseNotify
